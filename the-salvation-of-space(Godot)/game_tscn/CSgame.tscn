@@ -1,0 +1,140 @@
+[gd_scene load_steps=13 format=3 uid="uid://b0lagn71phiso"]
+
+[ext_resource type="Script" path="res://Scences_script/game.gd" id="1_0o6wg"]
+[ext_resource type="PackedScene" uid="uid://b23pgf5mo54qp" path="res://npc_scences/player.tscn" id="2_jfuo0"]
+[ext_resource type="Script" path="res://Scences_script/pause_menu.gd" id="3_f7und"]
+[ext_resource type="FontFile" uid="uid://di32tlqybvxhi" path="res://font/msyhbd.ttc" id="4_3yl1o"]
+[ext_resource type="Theme" uid="uid://3d1vsjlnhej3" path="res://GUI/pause_theme.tres" id="4_yl0h7"]
+[ext_resource type="Texture2D" uid="uid://bcxbfcq20g4jr" path="res://GUI/use/mr/button_one.png" id="5_d7q7x"]
+[ext_resource type="Texture2D" uid="uid://ctsgn38vyss2t" path="res://GUI/use/an/button_one_an.png" id="6_xhpjl"]
+[ext_resource type="Texture2D" uid="uid://dr25v7bixfq2v" path="res://GUI/use/xuan/button_one_xuan.png" id="7_xefvr"]
+[ext_resource type="Texture2D" uid="uid://bp5nalwlt1qt0" path="res://GUI/按键指引.png" id="10_kn5hj"]
+[ext_resource type="Texture2D" uid="uid://dp1yjesp4khly" path="res://暂停.png" id="10_l746c"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ouarm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qr53p"]
+font = ExtResource("4_3yl1o")
+font_size = 51
+outline_size = 8
+outline_color = Color(0, 0.647059, 1, 1)
+shadow_size = 3
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(0, -8)
+script = ExtResource("1_0o6wg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.62, 0.62)
+
+[node name="player" parent="." instance=ExtResource("2_jfuo0")]
+metadata/_edit_lock_ = true
+
+[node name="Boundary" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="left" type="StaticBody2D" parent="Boundary"]
+position = Vector2(-1550, 0)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/left"]
+position = Vector2(12.5, -1.25)
+shape = SubResource("WorldBoundaryShape2D_ouarm")
+
+[node name="right" type="StaticBody2D" parent="Boundary"]
+position = Vector2(1549, 7)
+rotation = -1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/right"]
+position = Vector2(12.5, -1.25)
+shape = SubResource("WorldBoundaryShape2D_ouarm")
+
+[node name="up" type="StaticBody2D" parent="Boundary"]
+position = Vector2(-4, -868)
+rotation = -3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/up"]
+position = Vector2(12.5, -1.25)
+shape = SubResource("WorldBoundaryShape2D_ouarm")
+
+[node name="down" type="StaticBody2D" parent="Boundary"]
+position = Vector2(-2, 867.075)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/down"]
+position = Vector2(12.5, -1.25)
+shape = SubResource("WorldBoundaryShape2D_ouarm")
+
+[node name="按键指引" type="Sprite2D" parent="."]
+position = Vector2(-1144, -765)
+texture = ExtResource("10_kn5hj")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -1430.0
+offset_top = -666.0
+offset_right = -835.0
+offset_bottom = -598.0
+text = "     移动         加速     暂停"
+label_settings = SubResource("LabelSettings_qr53p")
+
+[node name="PauseUI" type="CanvasLayer" parent="." node_paths=PackedStringArray("pause_panel")]
+process_mode = 3
+script = ExtResource("3_f7und")
+pause_panel = NodePath("Control/PausePanel")
+
+[node name="Control" type="Control" parent="PauseUI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_yl0h7")
+metadata/_edit_lock_ = true
+
+[node name="PauseButton" type="TextureButton" parent="PauseUI/Control"]
+visible = false
+layout_mode = 1
+offset_left = 1638.0
+offset_right = 4119.0
+offset_bottom = 1098.0
+scale = Vector2(0.113594, 0.113594)
+texture_normal = ExtResource("5_d7q7x")
+texture_pressed = ExtResource("6_xhpjl")
+texture_hover = ExtResource("7_xefvr")
+
+[node name="PausePanel" type="Panel" parent="PauseUI/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="暂停" type="Sprite2D" parent="PauseUI/Control/PausePanel"]
+position = Vector2(411, 170)
+scale = Vector2(0.644366, 0.644366)
+texture = ExtResource("10_l746c")
+
+[node name="ResumeButton" type="Button" parent="PauseUI/Control/PausePanel"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 364.0
+offset_right = 427.0
+offset_bottom = 514.0
+text = "继续游戏"
+
+[node name="QuitButton" type="Button" parent="PauseUI/Control/PausePanel"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 554.0
+offset_right = 414.0
+offset_bottom = 706.0
+text = "退出游戏"
+
+[connection signal="pressed" from="PauseUI/Control/PauseButton" to="PauseUI" method="pause"]
+[connection signal="pressed" from="PauseUI/Control/PausePanel/ResumeButton" to="PauseUI" method="unpause"]
+[connection signal="pressed" from="PauseUI/Control/PausePanel/QuitButton" to="PauseUI" method="quit_game"]

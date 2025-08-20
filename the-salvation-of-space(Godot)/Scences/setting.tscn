@@ -1,0 +1,183 @@
+[gd_scene load_steps=10 format=3 uid="uid://dan0g5l22qure"]
+
+[ext_resource type="Theme" uid="uid://3d1vsjlnhej3" path="res://GUI/pause_theme.tres" id="1_2xfht"]
+[ext_resource type="Script" path="res://Scences_script/quit_to_menu_button.gd" id="2_8i1bp"]
+[ext_resource type="Script" path="res://Scences_script/setting.gd" id="2_o7enl"]
+[ext_resource type="Texture2D" uid="uid://qhspiv7lkv2p" path="res://GUI/更新提示.png" id="4_48ja5"]
+[ext_resource type="FontFile" uid="uid://b6raa6kts6hh3" path="res://font/msyh.ttc" id="5_7j025"]
+[ext_resource type="Texture2D" uid="uid://cdkio4qwte2ht" path="res://GUI/正在开发.png" id="6_0d8d4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_36bwo"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_m8win"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_beuww"]
+font = ExtResource("5_7j025")
+font_size = 21
+
+[node name="setting" type="Control"]
+process_mode = 3
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_2xfht")
+script = ExtResource("2_o7enl")
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 29.0
+offset_right = 1874.0
+offset_bottom = 523.0
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.084
+anchor_top = 0.862
+anchor_right = 0.084
+anchor_bottom = 0.862
+offset_left = -128.28
+offset_top = 27.04
+offset_right = 120.72
+offset_bottom = 130.04
+pivot_offset = Vector2(126, 55)
+text = "返回"
+script = ExtResource("2_8i1bp")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = -0.714
+anchor_right = 0.504
+anchor_bottom = -0.714
+offset_left = -932.68
+offset_top = 1479.12
+offset_right = -683.68
+offset_bottom = 1582.12
+pivot_offset = Vector2(126, 55)
+disabled = true
+text = "取消"
+script = ExtResource("2_8i1bp")
+
+[node name="SaveButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = -0.714
+anchor_right = 0.504
+anchor_bottom = -0.714
+offset_left = -933.68
+offset_top = 1604.12
+offset_right = -684.68
+offset_bottom = 1707.12
+pivot_offset = Vector2(126, 55)
+disabled = true
+text = "保存"
+script = ExtResource("2_8i1bp")
+
+[node name="LinkButton" type="LinkButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.516
+anchor_top = 0.943
+anchor_right = 0.516
+anchor_bottom = 0.943
+offset_left = -149.72
+offset_top = 26.56
+offset_right = 50.2799
+offset_bottom = 46.56
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.52598, 1.52598)
+text = "点击了解更多团队信息"
+uri = "https://nexus.mysxl.cn"
+
+[node name="版权" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.997
+anchor_top = 0.929
+anchor_right = 0.997
+anchor_bottom = 0.929
+offset_left = -543.24
+offset_top = 12.68
+offset_right = 113.76
+offset_bottom = 83.68
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.829077, 0.829077)
+text = "© 2025 纳苏工坊版权所有
+Copyright © 2025 NexusWorkroom All Rights Reserved."
+label_settings = SubResource("LabelSettings_36bwo")
+horizontal_alignment = 2
+
+[node name="版本号" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -418.0
+offset_bottom = 25.0
+grow_horizontal = 0
+text = "Non_distribution_1.1.52+250723-Beta.1"
+label_settings = SubResource("LabelSettings_m8win")
+horizontal_alignment = 1
+
+[node name="更新提示" type="Sprite2D" parent="."]
+position = Vector2(1552, 274)
+texture = ExtResource("4_48ja5")
+
+[node name="温馨提示" type="Label" parent="."]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 39.0
+offset_right = 1036.0
+offset_bottom = 484.0
+text = "温馨提示：
+该版本为Beta版本，beta版本仅供内测玩家参考，请勿外传！！！
+由于涉及到时间问题以及游戏引擎等等问题，该版本背景图、地图、关卡等尚在开发，
+游戏设置目前仅供玩家了解游戏与团队信息。
+该版中部分功能，开发者是故意而为之，除玩法问题与功能问题外的运行问题等可以在QQ论坛中提出！
+如果是与GUI外观与美术部分有关问题请联系QQ群中美术策划！
+在候选版本出来前内测玩家如有游戏各方面建议可以尽管在论坛或邮箱中提出！
+
+联系方式：
+QQ群论坛：928209459
+邮箱：yaolan@nexusworkroom.cn（使用截止至2026.7.1）、1421646141@qq.com
+
+测试版阉割内容：（将来会在正式版中还原）
+1.设置内容    2.存档系统    3.关卡场景    4.场景切换动画    5.UI交互动画"
+label_settings = SubResource("LabelSettings_beuww")
+
+[node name="TabBar" type="TabBar" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.291
+anchor_top = 0.531
+anchor_right = 0.291
+anchor_bottom = 0.531
+offset_left = -151.72
+offset_top = -30.48
+offset_right = 421.28
+offset_bottom = 28.52
+theme = ExtResource("1_2xfht")
+current_tab = 0
+tab_alignment = 1
+tab_count = 3
+tab_0/title = "   游戏内设置   "
+tab_1/title = "   视频设置   "
+tab_2/title = "   音频设置   "
+
+[node name="正在开发" type="Sprite2D" parent="."]
+position = Vector2(619, 665)
+scale = Vector2(0.439189, 0.439189)
+texture = ExtResource("6_0d8d4")
