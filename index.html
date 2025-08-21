@@ -1,0 +1,694 @@
+<!doctype html>
+<!--Quite a few clients strip your Doctype out, and some even apply their own. Many clients do honor your doctype and it can make things much easier if you can validate constantly against a Doctype.-->
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A game 'Salvation of Space'</title>
+
+<!-- Please use an inliner tool to convert all CSS to inline as inpage or external CSS is removed by email clients -->
+<!-- important in CSS is used to prevent the styles of currently inline CSS from overriding the ones mentioned in media queries when corresponding screen sizes are encountered -->
+
+<style type="text/css">
+button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	outline: 0;
+	background-color:#88F2FF;
+	border: 0;
+	padding: 13px 15px;
+	color: #3FD2FF;
+	border-radius: 5px;
+	width: 250px;
+	height: 10vh;
+	cursor: pointer;
+	font-size: 18px;
+	position: relative;
+	}
+a{
+	text-decoration:inherit;
+	}
+div {
+  background-image: url('images/bg.png');
+}
+body {
+	margin: 0;
+}
+body, table, td, p, a, li, blockquote {
+	-webkit-text-size-adjust: none!important;
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+@media screen and (max-width:600px) {
+/*styling for objects with screen size less than 600px; */
+body, table, td, p, a, li, blockquote {
+	-webkit-text-size-adjust: none!important;
+	font-family: sans-serif;
+}
+table {
+	/* All tables are 100% width */
+	width: 100%;
+}
+.footer {
+	/* Footer has 2 columns each of 48% width */
+	height: auto !important;
+	max-width: 48% !important;
+	width: 48% !important;
+}
+table.responsiveImage {
+	/* Container for images in catalog */
+	height: auto !important;
+	max-width: 30% !important;
+	width: 30% !important;
+}
+table.responsiveContent {
+	/* Content that accompanies the content in the catalog */
+	height: auto !important;
+	max-width: 66% !important;
+	width: 66% !important;
+}
+.top {
+	/* Each Columnar table in the header */
+	height: auto !important;
+	max-width: 48% !important;
+	width: 48% !important;
+}
+.catalog {
+	margin-left: 0%!important;
+}
+}
+
+@media screen and (max-width:480px) {
+/*styling for objects with screen size less than 480px; */
+body, table, td, p, a, li, blockquote {
+	-webkit-text-size-adjust: none!important;
+	font-family: sans-serif;
+}
+table {
+	/* All tables are 100% width */
+	width: 100% !important;
+	border-style: none !important;
+}
+.footer {
+	/* Each footer column in this case should occupy 96% width  and 4% is allowed for email client padding*/
+	height: auto !important;
+	max-width: 96% !important;
+	width: 96% !important;
+}
+.table.responsiveImage {
+	/* Container for each image now specifying full width */
+	height: auto !important;
+	max-width: 96% !important;
+	width: 96% !important;
+}
+.table.responsiveContent {
+	/* Content in catalog  occupying full width of cell */
+	height: auto !important;
+	max-width: 96% !important;
+	width: 96% !important;
+}
+.top {
+	/* Header columns occupying full width */
+	height: auto !important;
+	max-width: 100% !important;
+	width: 100% !important;
+}
+.catalog {
+	margin-left: 0%!important;
+}
+}
+</style>
+</head>
+<body yahoo="yahoo">
+<table width="100%"  cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>    </tr>
+  </tbody>
+</table>
+<table width="100%"  cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>    </tr>
+  </tbody>
+</table>
+<table width="100%"  cellspacing="0" cellpadding="0">
+      <table width="600"  align="center" cellpadding="0" cellspacing="0">
+        <!-- Main Wrapper Table with initial width set to 60opx -->
+        <tbody>
+          <tr>
+            <td><table bgcolor="#d0cfcf" class="top" width="48%"  align="left" cellpadding="0" cellspacing="0" style="padding:10px 10px 10px 10px;">
+              <!-- First header column with Logo -->
+              <tbody>
+                <tr>
+                  <td style="font-size: 12px; color:#000000; text-align:center; font-family: sans-serif;">NEXUS WORKROOM&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table bgcolor="#d0cfcf" class="top" width="48%"  align="left" cellpadding="0" cellspacing="0" style="padding:10px 10px 10px 10px; text-align:right">
+                <!-- Second header column with ISSUE|DATE -->
+                <tbody>
+                  <tr>
+                    <td style="font-size: 12px; color:#929292; text-align:center; font-family: sans-serif;">最后更新：2025.8.21&nbsp;</td>
+                    </tr>
+                  </tbody>
+              </table></td>
+            </tr>
+          <tr> 
+            <!-- HTML Spacer row -->
+            <td style="font-size: 0; line-height: 0;" height="20"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+              <tr>
+                <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                </tr>
+              </table></td>
+            </tr>
+          <tr> 
+            <!-- HTML IMAGE SPACER -->
+            <td style="font-size: 0; line-height: 0;" height="20"><table align="left"  cellpadding="0" cellspacing="0" >
+              <tr>
+                <td ><img src="images/576x250.gif"  alt="" height="" width="100%" class=""></td>
+              </tr>
+              </table></td>
+            </tr>
+          <tr> 
+            <!-- HTML Spacer row -->
+            <td style="font-size: 0; line-height: 0;" height="20"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+              <tr>
+                <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                </tr>
+              </table></td>
+            </tr>
+          <tr> 
+            <!-- Introduction area -->
+            <td><table width="96%"  align="left" cellpadding="0" cellspacing="0">
+              <tr> 
+                <!-- row container for TITLE/EMAIL THEME -->
+                <td align="center" style="font-size: 32px; font-weight: 300; line-height: 2.5em; color: #000000; font-family: sans-serif;">&nbsp;Salvation of Space</td>
+                </tr>
+              <tr> 
+                <!-- row container for Tagline -->
+                <td align="center" style="font-size: 16px; font-weight:300; color: #929292; font-family: sans-serif;">———————————探求真理 即刻启程——————————— </td>
+                </tr>
+              <tr>
+                <td style="font-size: 0; line-height: 0;" height="20"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr> 
+                    <!-- HTML Spacer row -->
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                    </tr>
+                  </table></td>
+                </tr>
+              <tr> 
+                <!-- Row container for Intro/ Description -->                </tr>
+              </table>
+              <table width="96%"  align="left" cellpadding="0" cellspacing="0">
+                <tr>                  </tr>
+              </table>
+<table width="96%"  align="left" cellpadding="0" cellspacing="0">
+  <tr>
+              <td align="left" style="font-size: 14px; font-style: normal; font-weight: 100; color: #000000; line-height: 1.8; text-align:justify; padding:10px 20px 0px 20px; font-family: sans-serif;"><strong>一款furry向RPG2D冒险解谜游戏《空间的救赎》（又名Salvation of Space）计划于2026年上架发售于steam平台.</strong> <br>
+                    <br>
+                    主角所在星球尽管科技遥遥领先，但由于资源过度开发，导致星球寿命临终，人们早开始准备星际旅行，主角却在这时发现了组织背后的阴谋，组织了反抗军准备反击，并且受到了外星文明（兽）的帮助…… <br>
+                在这个游戏中你不仅仅扮演主角，还有外星文明的领导者等等；由你带领他们完成各种任务，解开各种难题，甚至凭一己之力拯救族群；只要你有足够的底气，足够勇敢，足够坚强，没有什么是你办不到的！<br></td>
+</tr>
+            </table>
+<table width="96%"  align="left" cellpadding="0" cellspacing="0">
+  <tr> </tr>
+            </table>
+              <table width="96%"  align="left" cellpadding="0" cellspacing="0">
+                <tr> </tr>
+              </table></td>
+            </tr>
+          <tr> 
+            <!-- HTML Spacer row -->            </tr>
+        </tbody>
+    </table>
+</table>
+<h2 align="center">游戏信息</h2>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <blockquote>
+                <blockquote>
+                  <blockquote>
+                    <blockquote>
+                      <blockquote>
+                        <p align="left">1.1 游戏名称：空间的救赎（Salvation of Space） </p>
+                      </blockquote>
+                    </blockquote>
+                  </blockquote>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <blockquote>
+                <blockquote>
+                  <blockquote>
+                    <blockquote>
+                      <blockquote>
+                        <p align="left">1.2 游戏引擎：Godot（Demo）、Unity </p>
+                      </blockquote>
+                    </blockquote>
+                  </blockquote>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <blockquote>
+                <blockquote>
+                  <blockquote>
+                    <blockquote>
+                      <blockquote>
+                        <p align="left">1.3 目标玩家群体：E10 </p>
+                      </blockquote>
+                    </blockquote>
+                  </blockquote>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <blockquote>
+                <blockquote>
+                  <blockquote>
+                    <blockquote>
+                      <blockquote>
+                        <p align="left">1.4 游戏故事概要：主角所在星球尽管科技遥遥领先，但由于资源过度开发，导致星球寿命临终，人们早开始准备星际旅行，主角却在这时发现了组织背后的阴谋，组织了反抗军准备反击，并且受到了外星文明（兽）的帮助…… </p>
+                      </blockquote>
+                    </blockquote>
+                  </blockquote>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <blockquote>
+                <blockquote>
+                  <blockquote>
+                    <blockquote>
+                      <blockquote>
+                        <p align="left">1.5 玩法独特性：虽然本质是RPG冒险游戏，让玩家探索与融入，但为了提升沉浸式，以及剧情的独特，参照了类似游戏《米塔》玩法，相比我们会在游戏中放入更多值得探索的东西，例如星际探索（该部分会进行联动）以及多结局（至少10种）等等 </p>
+                      </blockquote>
+                    </blockquote>
+                  </blockquote>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <blockquote>
+                <blockquote>
+                  <blockquote>
+                    <blockquote>
+                      <blockquote>
+                        <p align="left">1.6 独特卖点：联动动画视觉高质量、多种解密玩法结合、跨次元与世界、电影级沉浸式体验、射击\武打\探险相结合 </p>
+                      </blockquote>
+                    </blockquote>
+                  </blockquote>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <blockquote>
+                <blockquote>
+                  <blockquote>
+                    <blockquote>
+                      <blockquote>
+                        <p align="left">1.7 竞品游戏：《Changed》、《To The Moon》 </p>
+                      </blockquote>
+                    </blockquote>
+                  </blockquote>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <blockquote>
+                <blockquote>
+                  <blockquote>
+                    <blockquote>
+                      <blockquote>
+                        <p align="left">1.8 分类：沉浸式、剧情、探索、科幻、情感、穿越、RPG、未来、半开放性、单人 </p>
+                      </blockquote>
+                    </blockquote>
+                  </blockquote>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <blockquote>
+                <blockquote>
+                  <blockquote>
+                    <blockquote>
+                      <blockquote>
+                        <p align="left">1.9 计划发行日期：2027年 1.01 目标平台：Steam（Windows） | Tap Tap（Android） </p>
+                      </blockquote>
+                    </blockquote>
+                  </blockquote>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <blockquote>
+                <blockquote>
+                  <blockquote>
+                    <blockquote>
+                      <blockquote>
+                        <p align="left">1.02 可能的硬件要求： </p>
+                        <p align="left">（最低要求） </p>
+                        <p align="left">操作系统：Windows 10+（需要<strong>64位</strong>操作系统） </p>
+<p align="left">显卡：AMD/NVIDIA显卡<strong>至少有2GB显存 </strong> </p>
+                        <p align="left">CPU：运行基准速度为 <strong>2.0 GHz或更高</strong>的AMD / Intel CPU </p>
+                        <p align="left">内存：<strong>4GB</strong> RAM </p>
+                        <p align="left">存储空间：需要<strong>20GB</strong>可用空间 </p>
+                        <p align="left">DirectX 版本: <strong>11.0 </strong> </p>
+                        <p align="left">（推荐要求） </p>
+                        <p align="left">操作系统：Windows 11（需要<strong>64位</strong>操作系统） </p>
+                        <p align="left">显卡：NVIDIA GTX 750 Ti 2GB/AMD Radeon HD 7850 2GB </p>
+                        <p align="left">CPU：Intel Core i5 4670/ AMD FX-8350 </p>
+                        <p align="left">内存：4GB RAM </p>
+                        <p align="left">存储空间：需要20GB可用空间 </p>
+                        <p align="left">DirectX 版本: 11.0 </p>
+                      </blockquote>
+                    </blockquote>
+                  </blockquote>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <blockquote>
+                <blockquote>
+                  <blockquote>
+                    <blockquote>
+                      <blockquote>
+                        <p align="left">1.03 预售价：30 CN人民币￥&nbsp; &nbsp; 5 USD美元$&nbsp; &nbsp; 1000 JPY日元&nbsp; &nbsp; &nbsp;4 EUR欧元€ </p>
+                      </blockquote>
+                    </blockquote>
+                  </blockquote>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<h2 align="center">游戏试玩</h2>
+<div align="center">
+  <button><a href="./Game-SOS/game/game.html">跳转至游戏</a></button>
+</div>
+<table width="100%"  cellspacing="0" cellpadding="0">
+  
+  <h2 align="center">预告片&nbsp;</h2>
+<div align="center">
+    <iframe src="/player.bilibili.com/player.html?isOutside=true&aid=112660666387135&bvid=BV13bgveTE8m&cid=500001591806999&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+</table>
+<table width="100%"  cellspacing="0" cellpadding="0">
+  <tbody>
+    
+    
+  <table width="600"  align="center" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr> </tr>
+    </tbody>
+  </table>
+  
+  <table width="600"  align="center" cellpadding="0" cellspacing="0">
+  </table>
+  <h2 align="center"><img src="Game-SOS/images/Nexus toum.png" width="200" height="200" alt=""></h2>
+  <h2 align="center">关于招聘</h2>
+  <p align="center">现Nexus纳苏工坊（开发商）正极力招收 </p>
+  <p align="center"><strong>画师 和程序员（C#）各一位</strong></p>
+  <p align="center">(游戏引擎：Unity)</p>
+  <p align="center">同时征集主角外貌设定和NPC设定！画师与程序员与主角设定投稿者（NPC设定投稿者）均有不定回报！ </p>
+  <p align="center">&nbsp;</p>
+  <p align="center">&nbsp;</p>
+  <h2 align="center">&nbsp;开发人员介绍 </h2>
+  <strong></strong>
+  <p align="center">&nbsp;</p>
+  <table width="600"  align="center" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr> </tr>
+      <tr>
+        <td><table cellpadding="0" cellspacing="0" align="center" width="84%" style="margin-left:12.5%" class="catalog">
+          <!-- Table for catalog -->
+          <tr>
+            <td ><table class ="responsive-table" width="48%"  cellspacing="0" cellpadding="0" align="left" style="margin: 10px 0px 10px 0px;">
+              <!-- Table container for each image and description in catalog -->
+              <tbody>
+                <tr>
+                  <td><table class="table.responsiveImage" width="66%"  cellspacing="0" cellpadding="0" align="left">
+                    <!-- Table container for image -->
+                    <tbody>
+                      <tr>
+                        <td align="center" style="padding:10px 3px 10px 3px;"><img src="Game-SOS/images/yaolan.gif" alt="sample" style="width: 120px;">
+                          <h4>耀岚&nbsp;</h4></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="table.responsiveContent" width="66%"  cellspacing="0" cellpadding="0" align="left">
+                      <!-- Table container for content -->
+                      <tbody>
+                        <tr>
+                          <td><p style="font-size: 14px; font-style: normal; font-weight: normal; color: #929292;  padding: 5px 0px 0px 10px;line-height: 1.5em; font-family: sans-serif;">游戏策划/工作室团长/音乐/程序/信息/剧情</p>
+                            <a href="#" style="text-decoration:none">                                    </a></td>
+                          </tr>
+                        </tbody>
+                      </table></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class ="responsive-table" width="48%"  cellspacing="0" cellpadding="0" align="left" style="margin: 10px 0px 10px 0px;">
+                <!-- Table container for each image and description in catalog -->
+                <tbody>
+                  <tr>
+                    <td><table class="table.responsiveImage" width="66%"  cellspacing="0" cellpadding="0" align="left">
+                      <!-- Table container for image -->
+                      <tbody>
+                        <tr>
+                          <td align="center" style="padding:10px 3px 10px 3px;"><img src="Game-SOS/images/muci.png" alt="sample" style="width: 120px;">
+                            <h4>慕茨</h4></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="table.responsiveContent" width="66%"  cellspacing="0" cellpadding="0" align="left">
+                        <!-- Table container for content -->
+                        <tbody>
+                          <tr>
+                            <td><p style="font-size: 14px; font-style: normal; font-weight: normal; color: #929292;  padding: 5px 0px 0px 10px;line-height: 1.5em; font-family: sans-serif;">美术策划&nbsp;</p>
+                              <a href="#" style="text-decoration:none">                                      </a></td>
+                            </tr>
+                          </tbody>
+                        </table></td>
+                    </tr>
+                  </tbody>
+                </table></td>
+            </tr>
+          <tr>
+            <td><table class ="responsive-table" width="48%"  cellspacing="0" cellpadding="0" align="left" style="margin: 10px 0px 10px 0px;">
+              <!-- Table container for each image and description in catalog -->
+              <tbody>
+                <tr>
+                  <td><table class="table.responsiveImage" width="66%"  cellspacing="0" cellpadding="0" align="left">
+                    <!-- Table container for image -->
+                    <tbody>
+                      <tr>
+                        <td align="center" style="padding:10px 3px 10px 3px;"><img src="Game-SOS/images/ruicheng.png" alt="sample" style="width: 120px;">
+                          <h4>瑞橙</h4></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="table.responsiveContent" width="66%"  cellspacing="0" cellpadding="0" align="left">
+                      <!-- Table container for content -->
+                      <tbody>
+                        <tr>
+                          <td><p style="font-size: 14px; font-style: normal; font-weight: normal; color: #929292;  padding: 5px 0px 0px 10px;line-height: 1.5em; font-family: sans-serif;">主画师</p>
+                            <a href="#" style="text-decoration:none">                                    </a></td>
+                          </tr>
+                        </tbody>
+                      </table></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class ="responsive-table" width="48%"  cellspacing="0" cellpadding="0" align="left" style="margin: 10px 0px 10px 0px;">
+                <!-- Table container for each image and description in catalog -->
+                <tbody>
+                  <tr>
+                    <td><table class="table.responsiveImage" width="66%"  cellspacing="0" cellpadding="0" align="left">
+                      <!-- Table container for image -->
+                      <tbody>
+                        <tr>
+                          <td align="center" style="padding:10px 3px 10px 3px;"><img src="Game-SOS/images/muxu.png" alt="sample" style="width: 120px;">
+                            <h4>苜蓿&nbsp;</h4></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="table.responsiveContent" width="66%"  cellspacing="0" cellpadding="0" align="left">
+                        <!-- Table container for content -->
+                        <tbody>
+                          <tr>
+                            <td><p style="font-size: 14px; font-style: normal; font-weight: normal; color: #929292;  padding: 5px 0px 0px 10px;line-height: 1.5em; font-family: sans-serif;">GUI设计</p>
+                              <a href="#" style="text-decoration:none">                                      </a></td>
+                            </tr>
+                          </tbody>
+                        </table></td>
+                    </tr>
+                  </tbody>
+                </table></td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr> 
+        <!-- HTML spacer row -->
+        <td style="font-size: 0; line-height: 0;" height="20"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+          <tr>
+            <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+            </tr>
+          </table></td>
+      </tr>
+      <tr bgcolor="#d0cfcf">
+        <td><table class="footer" width="48%"  align="left" cellpadding="0" cellspacing="0">
+          <!-- First column of footer content -->
+          <tr>
+            <td><p align="center"  style="font-size: 22px; font-weight:300; line-height: 2.5em; color: #929292; font-family: sans-serif;">NEXUS WORKROOM&nbsp;</p>
+              <p align="center" style="font-size: 12px; color:#929292; text-align:center; font-family: sans-serif;">你与我，心连心</p></td>
+            </tr>
+          </table>
+          <table class="footer" width="48%"  align="left" cellpadding="0" cellspacing="0">
+            <!-- Second column of footer content -->
+            <tr>
+              <td><p style="font-size: 14px; font-style: normal; font-weight:normal; color: #ffffff; line-height: 1.8; text-align:justify;padding-top:10px; margin-left:20px; margin-right:20px; font-family: sans-serif;"> 联系我们：</p>
+                <p style="font-size: 14px; font-style: normal; font-weight:normal; color: #ffffff; line-height: 1.8; text-align:justify;padding-top:10px; margin-left:20px; margin-right:20px; font-family: sans-serif;">QQ群：928209459</p>
+                <p style="font-size: 14px; font-style: normal; font-weight:normal; color: #ffffff; line-height: 1.8; text-align:justify;padding-top:10px; margin-left:20px; margin-right:20px; font-family: sans-serif;">邮箱：&nbsp; 1421646141@qq.com</p>
+              <p align="right" style="font-family: sans-serif;"> <a style="color:#929292; text-decoration:none; padding-left:20px; font-size:14px;" href="https://afdian.com/a/tsos_game">爱发电</a> <a style="color:#929292; text-decoration:none; padding-left:20px;  font-size:14px;" href="https://indienova.com/g/the-salvation-of-space">独立游戏</a> <a style="color:#929292; text-decoration:none; font-size:14px; padding-left:20px; padding-right:20px; " href="https://space.bilibili.com/1264942842?spm_id_from=333.1296.0.0">半开源</a></p></td>
+            </tr>
+          </table></td>
+      </tr>
+    </tbody>
+  </table>
+  </tbody>
+</table>
+</body>
+</html>
